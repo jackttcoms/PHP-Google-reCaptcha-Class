@@ -1,6 +1,6 @@
 <?php
 // call your class (require_once)
-
+require_once 'reCaptcha.php';
 $reCaptcha = new reCaptcha('register', '(site key)', '(secret key)'); // load recaptcha class for spam protection
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') // Check form submitted via POST
