@@ -34,10 +34,8 @@ class reCaptcha
             $context = stream_context_create($options);
             $result = json_decode(file_get_contents($url, false, $context));
 
-            if ($result->score >= 0.5 && $result->success) {
-                return true;
-            }
-            return false;
+            #print_r($result);
+            return isset($result->score) >= 0.5;
         }
         return false;
     }
