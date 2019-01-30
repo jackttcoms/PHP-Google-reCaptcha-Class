@@ -9,6 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') // Check form submitted via POST
 	
     if (!$reCaptcha->success()) {
         echo 'recaptcha failed!';
+    } else {
+    	echo 'recaptcha success';
     }
 } else {
 		// other stuff
